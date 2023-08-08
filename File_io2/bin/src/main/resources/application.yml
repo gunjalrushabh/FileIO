@@ -1,0 +1,30 @@
+# Database configuration
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: system
+    password: "1234"  # Note: Since the password contains numbers only, enclose it in double quotes to prevent potential parsing issues.
+    driver-class-name: oracle.jdbc.OracleDriver
+   # testWhileIdle: true
+    #validationQuery: "SELECT 1"  # Note: Enclose the query in double quotes.
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Modifications
+# If you want to modify properties, just uncomment and change them here.
+
+#spring:
+#  datasource:
+#    driver-class-name: oracle.jdbc.OracleDriver
+
+#spring:
+#  jpa:
+#    database-platform: org.hibernate.dialect.Oracle10gDialect
+
+# File upload properties
+file:
+  upload-dir: "C:/Users/hp/Desktop/file_io_tester"  # Note: Enclose the path in double quotes.
